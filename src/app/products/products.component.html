@@ -1,0 +1,15 @@
+<div class="container-fluid">
+<div class="product-container">
+  <div class="card" *ngFor="let product of products">
+    <img [src]="product.data().Image" class="card-img-top" alt="" style="width:300px;height: auto;" (click)="productDetails(product)">
+
+    <div class="card-body" (click)="productDetails(product)">
+
+      <h5 class="card-title text-center">{{product.data().ProductName}}</h5>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+</div>

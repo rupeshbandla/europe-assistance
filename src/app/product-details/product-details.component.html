@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="product-container" *ngIf="product && product.data()"> 
+    <img [src]="product.data().Image" style="height: 200px;width:auto">
+    <div>
+      <h5>Product Details</h5>
+      <p>{{product.data().ProductName}}</p>
+      <p>{{product.data().Price}}</p>
+      <p>{{product.data().Description}}</p>
+      <p *ngIf="totalRating > 0">Average Rating: <b>{{totalRating}}</b></p>
+      <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+      <button class="btn btn-primary ml-3" (click)="addRating(product)">Add Rating</button>
+    </div>
+  </div>
+
+</div>
